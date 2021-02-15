@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3436;
+
+  .box{
+    width: 400px;
+    padding: 24px;
+    background-color: #2d3436;
+    color: #ffffff;
+    position: relative;
+
+    &::before,&::after{
+      position: absolute;
+      content: '';
+      left: -2px;
+      top:-2px;
+      bottom:-2px;
+      right:-2px;
+      // background-color: #f2f2f2;
+      // 渐变背景
+      background-image:linear-gradient(to top right,#B92B27,#2d3436,#1565c0);
+      z-index: -1;
+    }
+
+    &::after{
+      filter: blur(20px);
+    }
+
+    h1{
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    p{
+      font-size: 16px;
+      line-height: 30px;
+      padding-top: 24px;
+      // 首行缩进两个字符
+      text-indent: 2em;
+    }
+  }
+
+}
